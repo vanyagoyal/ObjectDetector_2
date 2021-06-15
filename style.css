@@ -1,0 +1,124 @@
+body {
+    background-size:cover;
+    background-position-y : top;
+    text-align: center;
+}
+.heading {
+    width:fit-content;
+    border: 7px solid red;
+    border-radius:25px;
+    padding:20px;
+    line-height: 1 !important;
+    font-family: 'Stint Ultra Condensed', cursive;
+    font-size:100px;
+    color:blueviolet;
+    text-decoration: underline rgb(11, 11, 133);
+    box-shadow:0px 0px 30px powderblue;
+}
+
+
+.flip-card {
+    background-color: transparent;
+    width: 250px;
+    height: 250px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    border-radius: 20px;
+    box-shadow: 10px 10px 15px rgb(211, 255, 200);
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border-radius: 20px;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+    height:250px;
+    border-radius: 20px;
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-radius: 20px;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: rgb(174, 247, 219);
+    color:rgb(255, 0, 106);
+    transform: rotateY(180deg);
+    font-weight: 700;
+    font-family: 'Roboto Slab', serif;
+  }
+
+  .flip-card-back h1{
+    background-color: rgb(11, 6, 80);
+    color:rgb(252, 186, 200);
+    font-family: 'Mate SC', serif;
+    font-weight: bold;
+    font-size:50px;
+  }
+
+  .glyphicon{
+    background-color: rgb(184, 30, 255);
+    color:aquamarine;
+    font-family: 'Mate SC', serif;
+    font-weight: bold;
+    font-size:25px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .grid-container {
+    display: flex;
+    grid-gap: 50px;
+    margin-left:480px;
+    grid-row-gap:0px;
+  }
+  .dismiss_btn {
+    color: rgb(168, 5, 73) !important;
+  }
+  .modal-body img {
+    width:400px;
+    height:400px;
+  }
+  .modal-content {
+    background-color: transparent !important;
+  }
+  .modal-header {
+    background-color: white;
+    font-family: 'Squada One', cursive;
+    color:mediumblue;
+  }
+  #status , #number {
+    width:fit-content;
+    height:fit-content;
+    font-family: 'Baloo Tammudu 2', cursive;
+    padding:10px;
+    font-size:30px;
+  }
+  #number {
+    color:rgb(247, 208, 214);
+  }
+  canvas {
+    border:2px solid red;
+  }

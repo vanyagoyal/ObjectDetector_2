@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Detector On Images</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Stint+Ultra+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@600&display=swap" rel="stylesheet"> 
+</head>
+<body background="background_image.jpg">
+    <center>
+    <h3 class="heading bg-info">Object Detector</h3>
+    <br>
+    <h2 id="status" class="bg-danger text-primary">Status :-</h2>
+    <h1 id="number" class="bg-primary">Number Of Objects Detected :- 0</h1>
+      <div class="grid-container">
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="CLOCK.gif" style="width:250px;height:250px;border-radius: 20px;">
+              </div>
+              <div class="flip-card-back">
+                <h1>CLOCK</h1>
+                <br>
+                <p>Click on the view button to view the image.</p>
+                <br>
+                <br>
+                <p class="glyphicon glyphicon-eye-open" data-toggle="modal" data-target="#clockModal"></p>
+              </div>
+            </div>
+          </div><!-- Modal -->
+<div id="clockModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title heading_modal">CLOCK</h4>
+      </div>
+    </div>
+    <div class="modal-body" id="clock_div">
+    </div>
+  </div>
+</div>
+
+
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="bag_.gif" style="width:250px;height:250px;border-radius: 20px;">
+              </div>
+              <div class="flip-card-back">
+                <h1>BAG</h1>
+                <br>
+                <p>Click on the view button to view the image.</p>
+                <br>
+                <br>
+                <p class="glyphicon glyphicon-eye-open" data-toggle="modal" data-target="#bagModal"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="bagModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+        
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Bag</h4>
+              </div>
+              <div class="modal-body" id="bag">
+                <img src="bag.jpg">
+              </div>
+            </div>
+        
+          </div>
+        </div>
+        <br>
+        <br>
+
+      <div class="grid-container">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="laptop_.gif" style="width:250px;height:250px;border-radius: 20px;">
+              </div>
+              <div class="flip-card-back">
+                <h1>LAPTOP</h1>
+                <br>
+                <p>Click on the view button to view the image.</p>
+                <br>
+                <br>
+                <p class="glyphicon glyphicon-eye-open" data-toggle="modal" data-target="#laptopModal"></p>
+              </div>
+            </div>
+          </div>
+          <div id="laptopModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+          
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Laptop</h4>
+                </div>
+                <div class="modal-body" id="laptop">
+                  <img src="laptop.jpg">
+                </div>
+              </div>
+          
+            </div>
+          </div>
+
+
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="https://i.postimg.cc/3RGBGWfb/board.gif" style="width:250px;height:250px;border-radius: 20px;">
+              </div>
+              <div class="flip-card-back">
+                <h1 style="margin-bottom: 10px;">WHITE BOARD</h1>
+                <p>Click on the view button to view the image.</p>
+                <p class="glyphicon glyphicon-eye-open" data-toggle="modal" data-target="#boardModal"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="boardModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+        
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">White Board</h4>
+              </div>
+              <div class="modal-body" id="board">
+                <img src="board.jpeg">
+              </div>
+            </div>
+        
+          </div>
+        </div>
+        <br>
+        <br>
+
+      <div class="grid-container">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="teddy.gif" style="width:250px;height:250px;border-radius: 20px;">
+              </div>
+              <div class="flip-card-back">
+                <h1 style="font-size:40px;">TEDDY & SMART WATCH</h1>
+                <p  style="margin-bottom: 0px;">Click on the view button to view the image.</p>
+                <p class="glyphicon glyphicon-eye-open" data-toggle="modal" data-target="#teddyModal"></p>
+              </div>
+            </div>
+          </div>
+
+          <div id="teddyModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+          
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Teddy And Smart Watch</h4>
+                </div>
+                <div class="modal-body" id="teddy">
+                  <img src="watch.jpg">
+                </div>
+              </div>
+          
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="flower.gif" style="width:250px;height:250px;border-radius:20px;">
+              </div>
+              <div class="flip-card-back">
+                <h1>FLOWERS</h1>
+                <br>
+                <p>Click on the view button to view the image.</p>
+                <br>
+                <br>
+                <p class="glyphicon glyphicon-eye-open" data-toggle="modal" data-target="#flowerModal"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="flowerModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+        
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Flowers</h4>
+              </div>
+              <div class="modal-body" id="flowers">
+                <img src="flowers.jpg">
+              </div>
+            </div>
+        
+          </div>
+        </div>
+
+</center>
+<script src="main.js"></script>
+</body>
+</html>
